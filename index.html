@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ridip Medhi | Home</title>
+    <meta name="description" content="Ridip Medhi - Postdoctoral Researcher in Mathematics. Ph.D. from IIT Delhi specializing in Fractal Geometry, Approximation Theory, and Fixed Point Theory.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    
     <style>
         :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
@@ -14,43 +14,16 @@
         header { margin-bottom: 50px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
         .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        
-        /* Navigation Styling */
         .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
-        
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
-        
-        /* --- NEW PROFILE PHOTO STYLING --- */
-        .profile-photo {
-            float: right;           /* Pushes photo to the right */
-            width: 160px;           /* Standard academic photo size */
-            height: 160px;          /* Keep width and height same for a circle */
-            border-radius: 50%;     /* Makes it circular */
-            object-fit: cover;      /* Ensures image doesn't stretch, crops center */
-            margin-left: 25px;      /* Spacing between photo and text */
-            margin-bottom: 15px;    /* Spacing if text wraps below photo */
-            border: 3px solid #fff; /* White border looks sharp */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Subtle shadow for depth */
-        }
-
-        /* Clears float if you add content below the text */
+        .profile-photo { float: right; width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-left: 25px; margin-bottom: 15px; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
         .about-content::after { content: ""; display: table; clear: both; }
-
-        /* Responsive styling for narrow screens/mobile */
-        @media (max-width: 600px) {
-            .profile-photo {
-                float: none;        /* Removes float */
-                display: block;     /* Places on its own line */
-                margin: 0 auto 25px; /* Centers photo, adds spacing below */
-                width: 140px;
-                height: 140px;
-            }
-        }
-        /* --------------------------------- */
-
+        .contact-info { margin-top: 30px; background-color: #f8f9fa; padding: 20px; border-radius: 6px; border: 1px solid var(--border-color); }
+        .contact-info p { margin: 6px 0; font-size: 0.95rem; }
+        @media (max-width: 600px) { .profile-photo { float: none; display: block; margin: 0 auto 25px; width: 140px; height: 140px; } }
         footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
@@ -70,19 +43,23 @@
 
         <section>
             <h2>About Me</h2>
-            
             <div class="about-content">
                 <img src="profile.jpg" alt="Ridip Medhi" class="profile-photo">
-                
                 <p>
-                    I am a Postdoctoral Researcher in Mathematics specializing in the structural and statistical behaviors of dynamical systems. I recently completed my Ph.D. in Mathematics at the <strong>Indian Institute of Technology Delhi</strong>.
+                    I am a Postdoctoral Researcher in Mathematics. I completed my Ph.D. in Mathematics at the <strong>Indian Institute of Technology Delhi</strong>, 
+                    where I was fortunate to be advised by <a href="#">Dr. Viswanathan Puthan Veedu</a>.
                 </p>
                 <p>
-                    My academic focus centers on exploring complexities within geometric structures, invariant measures, and chaotic systems. I am particularly drawn to problems that bridge abstract analysis with concrete geometric representations.
+                    My areas of specialization lie in <strong>Fractal Geometry</strong>, <strong>Approximation Theory</strong>, and the <strong>Theory of Fixed Points</strong>. My research primarily focuses on the intersection of iterative processes, measure-preserving transformations, and chaotic topological structures.
                 </p>
-                <p>
-                    My work investigates how deterministic rules can generate random-like complexity, applying tools from ergodic theory and fractal geometry to understand the stability and distribution of orbits in complex spaces.
-                </p>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>📍 Institutional Address:</strong> Department of Mathematics, Indian Institute of Technology Delhi, Hauz Khas, New Delhi, 110016, India</p>
+                <p><strong>📧 Work Email:</strong> <a href="mailto:maz208239@iitd.ac.in">maz208239@iitd.ac.in</a></p>
+                <p><strong>📧 Personal Email:</strong> <a href="mailto:ridipmedhi77@gmail.com">ridipmedhi77@gmail.com</a></p>
+                <p><strong>📱 Mobile:</strong> +91 9085844638</p>
+                <p><strong>🔗 Researcher ID:</strong> <a href="https://orcid.org/0009-0003-2313-0123" target="_blank">ORCID Profile</a></p>
             </div>
         </section>
 
