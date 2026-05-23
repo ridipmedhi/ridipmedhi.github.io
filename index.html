@@ -6,6 +6,7 @@
     <title>Ridip Medhi | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
     <style>
         :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
@@ -13,11 +14,43 @@
         header { margin-bottom: 50px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
         .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        
+        /* Navigation Styling */
+        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
+        
+        /* --- NEW PROFILE PHOTO STYLING --- */
+        .profile-photo {
+            float: right;           /* Pushes photo to the right */
+            width: 160px;           /* Standard academic photo size */
+            height: 160px;          /* Keep width and height same for a circle */
+            border-radius: 50%;     /* Makes it circular */
+            object-fit: cover;      /* Ensures image doesn't stretch, crops center */
+            margin-left: 25px;      /* Spacing between photo and text */
+            margin-bottom: 15px;    /* Spacing if text wraps below photo */
+            border: 3px solid #fff; /* White border looks sharp */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+        }
+
+        /* Clears float if you add content below the text */
+        .about-content::after { content: ""; display: table; clear: both; }
+
+        /* Responsive styling for narrow screens/mobile */
+        @media (max-width: 600px) {
+            .profile-photo {
+                float: none;        /* Removes float */
+                display: block;     /* Places on its own line */
+                margin: 0 auto 25px; /* Centers photo, adds spacing below */
+                width: 140px;
+                height: 140px;
+            }
+        }
+        /* --------------------------------- */
+
         footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
@@ -31,18 +64,26 @@
                 <a href="research.html">Research</a>
                 <a href="experience.html">Experience</a>
                 <a href="interests.html">Interests</a>
-                <a href="reading.html">Readings</a>
+                <a href="reading.html">Reading</a>
             </div>
         </header>
 
         <section>
             <h2>About Me</h2>
-            <p>
-                I am a Postdoctoral Researcher in Mathematics specializing in the structural and statistical behaviors of dynamical systems. I completed my Ph.D. in Mathematics at the <strong>Indian Institute of Technology Delhi</strong>. 
-            </p>
-            <p>
-                My academic focus centers on exploring complexities within geometric structures, invariant measures, and chaotic systems. I am particularly drawn to problems that bridge abstract analysis with concrete geometric representations.
-            </p>
+            
+            <div class="about-content">
+                <img src="profile.jpg" alt="Ridip Medhi" class="profile-photo">
+                
+                <p>
+                    I am a Postdoctoral Researcher in Mathematics specializing in the structural and statistical behaviors of dynamical systems. I recently completed my Ph.D. in Mathematics at the <strong>Indian Institute of Technology Delhi</strong>.
+                </p>
+                <p>
+                    My academic focus centers on exploring complexities within geometric structures, invariant measures, and chaotic systems. I am particularly drawn to problems that bridge abstract analysis with concrete geometric representations.
+                </p>
+                <p>
+                    My work investigates how deterministic rules can generate random-like complexity, applying tools from ergodic theory and fractal geometry to understand the stability and distribution of orbits in complex spaces.
+                </p>
+            </div>
         </section>
 
         <footer>
