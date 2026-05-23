@@ -12,7 +12,7 @@
         header { margin-bottom: 50px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
         .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
         section { margin-bottom: 45px; }
@@ -22,7 +22,7 @@
         .book-title { font-weight: 600; font-size: 1.1rem; margin: 0; color: #1a252f; }
         .book-author { font-size: 0.95rem; color: var(--light-accent); margin: 2px 0 8px 0; font-style: italic; }
         .book-notes { font-size: 0.95rem; margin: 0; }
-        .status-badge { display: inline-block; background-color: #e3f2fd; color: #0d47a1; font-size: 0.75rem; padding: 2px 8px; border-radius: 3px; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+        .status-badge { display: inline-block; background-color: #e8f5e9; color: #1b5e20; font-size: 0.75rem; padding: 2px 8px; border-radius: 3px; font-weight: 600; margin-left: 8px; vertical-align: middle; }
         footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
@@ -42,15 +42,13 @@
 
         <section>
             <h2>Personal Library & Reading Log</h2>
-            <p>
-                A central log dedicated to track books moving across my desk—ranging from mathematical history and philosophy to literature, essay collections, and narrative non-fiction. 
-            </p>
+            <p>A central log dedicated to tracking books moving across my desk—ranging from mathematical history and philosophy to literature, essay collections, and narrative non-fiction.</p>
 
             <h3>Currently Reading</h3>
-            <div class="book-card" style="border-left-color: #27ae60;">
-                <p class="book-title">Gödel, Escher, Bach: An Eternal Golden Braid <span class="status-badge" style="background-color: #e8f5e9; color: #1b5e20;">Active</span></p>
+            <div class="book-card">
+                <p class="book-title">Gödel, Escher, Bach: An Eternal Golden Braid <span class="status-badge">Active</span></p>
                 <p class="book-author">Douglas Hofstadter</p>
-                <p class="book-notes">Revisiting the fascinating conceptual loops of self-reference, formal systems, and symmetry. A classic reflection on how cognition and patterns emerge from structured rules.</p>
+                <p class="book-notes">Revisiting the fascinating conceptual loops of self-reference, formal systems, and symmetry. A classic reflection on how patterns emerge from structured rules.</p>
             </div>
 
             <h3>Recent Highlights</h3>
@@ -59,16 +57,15 @@
                 <p class="book-author">Mikhail Bulgakov</p>
                 <p class="book-notes">An incredible, multi-layered satirical masterpiece balancing dark theological philosophy, magical realism, and classic dramatic irony.</p>
             </div>
-
             <div class="book-card">
                 <p class="book-title">The Princeton Companion to Mathematics</p>
                 <p class="book-author">Edited by Timothy Gowers</p>
-                <p class="book-notes">Diaking into different expository essays on areas outside my immediate focus to gain fresh perspectives on foundational geometric frameworks.</p>
+                <p class="book-notes">Diving into different expository essays on areas outside my immediate focus to gain fresh perspectives on foundational geometric frameworks.</p>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 Ridip Medhi. Personal Library Log.</p>
+            <p>&copy; 2026 Ridip Medhi. Library Log.</p>
         </footer>
     </div>
 </body>
