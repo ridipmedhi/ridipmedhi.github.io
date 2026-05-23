@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridip Medhi | Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
+        .container { max-width: 750px; margin: 0 auto; padding: 60px 20px; }
+        header { margin-bottom: 50px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
+        .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
+        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        section { margin-bottom: 45px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
+        h3 { font-size: 1.2rem; margin-top: 30px; color: var(--accent-color); }
+        .item { margin-bottom: 25px; }
+        .item-title { font-weight: 600; margin: 0; }
+        .item-meta { font-size: 0.9rem; color: var(--light-accent); margin: 2px 0 8px 0; }
+        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ridip Medhi</h1>
+            <div class="subtitle">Postdoctoral Researcher in Mathematics</div>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="research.html" class="active">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="interests.html">Interests</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Research Areas & Publications</h2>
+            <p>
+                My primary research interests lie at the intersection of <strong>Fractal Geometry</strong>, <strong>Dynamical Systems</strong>, and <strong>Ergodic Theory</strong>. Specifically, I investigate properties like the Hausdorff dimension of self-similar sets, transformations preserving specific measures, and convergence behaviors.
+            </p>
+            <p>
+                A core sample of the mathematical frameworks I work with involves analyzing ergodic averages:
+                $$\lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} f(T^k x) = \int_{\Omega} f \, d\mu$$
+            </p>
+
+            <h3>Selected Work & Preprints</h3>
+            <div class="item">
+                <p class="item-title">A Novel Proof for Elton's Ergodic Theorem via Banach Limits</p>
+                <p class="item-meta">Preprint / Working Paper</p>
+                <p>Developed an alternative, direct proof framework for Elton's Ergodic Theorem utilizing properties of Banach limits to evaluate asymptotic behavior in random dynamical systems.</p>
+            </div>
+            <div class="item">
+                <p class="item-title">Dimensions and Iterated Function Systems (IFS)</p>
+                <p class="item-meta">In Progress</p>
+                <p>Investigating overlapping conditions and dimension conservation for non-linear contractions within fractal sets.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Ridip Medhi. Code rendered via MathJax.</p>
+        </footer>
+    </div>
+</body>
+</html>
