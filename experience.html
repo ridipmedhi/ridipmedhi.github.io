@@ -12,14 +12,16 @@
         header { margin-bottom: 50px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
         .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
-        .item { margin-bottom: 30px; }
-        .item-title { font-weight: 600; margin: 0; font-size: 1.1rem; }
-        .item-meta { font-size: 0.95rem; color: #2980b9; margin: 2px 0 8px 0; font-weight: 500; }
+        .item { margin-bottom: 25px; }
+        .item-title { font-weight: 600; margin: 0; font-size: 1.05rem; color: #1a252f; }
+        .item-meta { font-size: 0.9rem; color: #2980b9; margin: 2px 0 6px 0; font-weight: 500; }
+        ul.clean-list { list-style-type: square; padding-left: 20px; }
+        ul.clean-list li { margin-bottom: 8px; font-size: 0.95rem; }
         footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
@@ -38,23 +40,65 @@
         </header>
 
         <section>
-            <h2>Academic Experience & Education</h2>
+            <h2>Education</h2>
             
             <div class="item">
-                <div class="item-title">Postdoctoral Researcher</div>
-                <div class="item-meta">Incoming Position</div>
-                <p>Continuing advanced research programs, expanding geometric frameworks within measure-preserving transformations, and establishing international research networks.</p>
+                <div class="item-title">Ph.D. in Mathematics</div>
+                <div class="item-meta">Indian Institute of Technology Delhi | 2020 &ndash; 2025</div>
             </div>
 
             <div class="item">
-                <div class="item-title">Ph.D. in Mathematics</div>
-                <div class="item-meta">Indian Institute of Technology Delhi | 2021 &ndash; 2025</div>
-                <p>Doctoral studies concentrated deeply within Ergodic Theory, structural chaotic maps, and the geometrical dimensions of fractals under rigid analysis benchmarks.</p>
+                <div class="item-title">M.Sc. in Mathematics</div>
+                <div class="item-meta">Tezpur University | 2018 &ndash; 2020</div>
+                <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 8.34 / 10</p>
+            </div>
+
+            <div class="item">
+                <div class="item-title">B.Sc. in Mathematics</div>
+                <div class="item-meta">Guwahati College | 2015 &ndash; 2018</div>
+                <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 9.2 / 10</p>
             </div>
         </section>
 
+        <section>
+            <h2>Visiting Positions</h2>
+            <div class="item">
+                <div class="item-title">Visiting Ph.D. Scholar</div>
+                <div class="item-meta">Budapest University of Technology and Economics, Hungary | 2024 &ndash; 2025</div>
+                <p style="margin: 0; font-size: 0.95rem;">Spent an academic semester conducting advanced research within the Department of Mathematics.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Teaching Experience</h2>
+            <p>Served as a Graduate Teaching Assistant across multiple core engineering and graduate mathematics tracks within the Department of Mathematics at IIT Delhi:</p>
+            <ul class="clean-list">
+                <li><strong>MTL100: Calculus</strong> &ndash; Fall 2021, Fall 2022 (B.Tech.)</li>
+                <li><strong>MTL101: Linear Algebra</strong> &ndash; Spring 2022 (B.Tech.)</li>
+                <li><strong>MTL122: Real and Complex Analysis</strong> &ndash; Spring 2023 (B.Tech.)</li>
+                <li><strong>MTL603: Functional Analysis</strong> &ndash; Fall 2023 (M.Sc.)</li>
+                <li><strong>MTL510: Measure and Integration</strong> &ndash; Spring 2024 (M.Sc.)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Grants, Honours & Awards</h2>
+            <ul class="clean-list">
+                <li><strong>2025:</strong> Research Excellence Travel Award, Indian Institute of Technology Delhi.</li>
+                <li><strong>2024:</strong> Stipendium-Hungaricum Scholarship for pursuing research residency at the Budapest University of Technology and Economics.</li>
+                <li><strong>2019:</strong> Qualified CSIR UGC-NET Junior Research Fellowship (JRF) with All India Rank (AIR) 98.</li>
+                <li><strong>2019:</strong> NBHM Post-Graduate Merit Scholarship.</li>
+                <li><strong>2018:</strong> UGC Post-Graduate Merit Scholarship for University Rank Holders.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Language Skills</h2>
+            <p style="font-size: 0.95rem;"><strong>Native:</strong> Assamese, Bengali &bull; <strong>Proficient:</strong> English, Hindi</p>
+        </section>
+
         <footer>
-            <p>&copy; 2026 Ridip Medhi. Built via GitHub Pages.</p>
+            <p>&copy; 2026 Ridip Medhi. Updated: January 2026.</p>
         </footer>
     </div>
 </body>
