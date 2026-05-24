@@ -15,20 +15,19 @@
         }
       });
     </script>
-    <script type="text/javascript" async 
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     
     <style>
         :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 750px; margin: 0 auto; padding: 60px 20px; }
-        header { margin-bottom: 50px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
-        .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
-        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        .wrapper { display: flex; max-width: 950px; margin: 0 auto; padding: 60px 20px; gap: 50px; }
+        .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 60px; height: fit-content; }
+        .sidebar h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0 0 5px 0; color: #1a252f; }
+        .sidebar .subtitle { font-size: 0.95rem; color: var(--light-accent); margin-bottom: 30px; font-weight: 300; line-height: 1.3; }
+        .nav-links { display: flex; flex-direction: column; gap: 12px; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 4px 0; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        .main-content { flex-grow: 1; max-width: 680px; }
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
         h3 { font-size: 1.1rem; margin-top: 35px; color: var(--accent-color); border-left: 3px solid #2980b9; padding-left: 10px; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85rem; }
@@ -36,117 +35,97 @@
         .item-title { font-weight: 600; margin: 0; font-size: 1rem; color: #1a252f; }
         .item-meta { font-size: 0.88rem; color: var(--light-accent); margin: 3px 0 6px 0; }
         .journal { font-style: italic; color: #2c3e50; }
-        .doi { font-size: 0.85rem; color: #2980b9; }
-        ul.summary-list { padding-left: 20px; margin-bottom: 30px; }
-        ul.summary-list li { margin-bottom: 10px; font-size: 0.98rem; }
-        ul.conferences { padding-left: 20px; }
-        ul.conferences li { margin-bottom: 12px; font-size: 0.95rem; }
-        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        .doi { font-size: 0.85rem; color: #2980b9; text-decoration: none; } .doi:hover { text-decoration: underline; }
+        ul.summary-list, ul.conferences { padding-left: 20px; }
+        ul.summary-list li, ul.conferences li { margin-bottom: 10px; font-size: 0.95rem; }
+        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); border-top: 1px solid var(--border-color); padding-top: 20px; }
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; gap: 30px; padding: 40px 20px; }
+            .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+            .nav-links { flex-direction: row; flex-wrap: wrap; gap: 15px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="wrapper">
+        <aside class="sidebar">
             <h1>Ridip Medhi</h1>
             <div class="subtitle">Postdoctoral Researcher in Mathematics</div>
-            <div class="nav-links">
+            <nav class="nav-links">
                 <a href="index.html">About</a>
                 <a href="research.html" class="active">Research</a>
                 <a href="experience.html">Experience</a>
                 <a href="interests.html">Interests</a>
                 <a href="reading.html">Reading</a>
-            </div>
-        </header>
+            </nav>
+        </aside>
 
-        <section>
-            <h2>Research Overview</h2>
-            <p>
-                The primary focus of my mathematical research has been to provide a unified approach to the study of Iterated Function Systems (IFSs) defined by weaker contractive mappings. By relaxing classical, rigid contraction constraints, my work investigates the core structural, geometric, and statistical behaviors of non-linear chaotic systems, focusing heavily on invariant measures and fractal dimensions. </p>
-            <p>
-                Key areas of contribution from my doctoral work include:
-            </p>
-            <ul class="summary-list">
-                <li>
-                    <strong>Generalized Contractions & HB-Theory:</strong> Established the Hutchinson-Barnsley theory, coding map continuities, and the explicit existence and uniqueness of invariant measures for broad families of non-standard mappings, including countable cyclic $\phi$-contractions, local radial contractions (LRCs), and $F$-contractions. </li>
-                <li>
-                    <strong>Elton's Ergodic Theorem & Banach Limits:</strong> Formulated the framework of <em>ergodicity-inducing IFSs</em> to derive fresh, sufficient conditions under which Elton's Ergodic Theorem holds. By integrating Lorentz's classic results on Banach limits, we corrected foundational inaccuracies in existing literature to construct a simpler, unified proof strategy. </li>
-                <li>
-                    <strong>Dimension Formulae for $\phi$-Similar Systems:</strong> Resolved an open restriction in the dimension theory of generalized self-similarity by proving the Hausdorff dimension formula ($dim_H(\Lambda) = s$) for $\phi$-similar sets under the Strong Separation Property (SSP) <em>without</em> assuming the exact Hausdorff measure is positive and finite. Additionally, derived exact values for the Hausdorff dimension of associated invariant measures. </li>
-                <li>
-                    <strong>Operator Dynamics:</strong> Evaluated the Ruelle operator theorem under systems with variable weight functions, confirming uniform convergence properties of normalized transfer operators. </li>
-            </ul>
-        </section>
+        <main class="main-content">
+            <section>
+                <h2>Research Overview</h2>
+                <p>
+                    The primary focus of my mathematical research has been to provide a unified approach to the study of Iterated Function Systems (IFSs) defined by weaker contractive mappings. By relaxing classical, rigid contraction constraints, my work investigates the core structural, geometric, and statistical behaviors of non-linear chaotic systems, focusing heavily on invariant measures and fractal dimensions. </p>
+                <ul class="summary-list">
+                    <li><strong>Generalized Contractions:</strong> Established the Hutchinson-Barnsley theory, coding map continuities, and unique invariant measures for broad mapping families, including countable cyclic $\phi$-contractions, local radial contractions (LRCs), and $F$-contractions. </li>
+                    <li><strong>Elton's Ergodic Theorem & Banach Limits:</strong> Formulated the framework of <em>ergodicity-inducing IFSs</em> to derive sufficient conditions under which Elton's Ergodic Theorem holds, using properties of Banach limits to reconcile discrepancies in existing literature. </li>
+                    <li><strong>Dimension Formulae for $\phi$-Similar Systems:</strong> Resolved constraints in the dimension theory of generalized self-similarity by proving the Hausdorff dimension formula ($dim_H(\Lambda) = s$) under the Strong Separation Property (SSP) <em>without</em> assuming the exact Hausdorff measure is positive and finite. </li>
+                    <li><strong>Operator Dynamics:</strong> Evaluated the Ruelle operator theorem under systems with variable weight functions, confirming uniform convergence properties of normalized transfer operators. </li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Publications & Preprints</h2>
+            <section>
+                <h2>Publications & Preprints</h2>
+                <h3>Journal Articles</h3>
+                <div class="item">
+                    <p class="item-title">Exploring Iterative Dynamics, Invariant Measures, and Ergodicity in F-Contractive Iterated Function Systems</p>
+                    <p class="item-meta">R. Medhi, N. Secelean, P. Viswanathan | <span class="journal">Qualitative Theory of Dynamical Systems</span>, 24, 185 (2025) </p>
+                    <a class="doi" href="https://doi.org/10.1007/s12346-025-01345-4" target="_blank">https://doi.org/10.1007/s12346-025-01345-4</a>
+                </div>
+                <div class="item">
+                    <p class="item-title">A note on the Banach limit-based proof of Elton's ergodic theorem for iterated function systems</p>
+                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Topology and Applications</span> (2025) </p>
+                    <a class="doi" href="https://doi.org/10.1016/j.topol.2025.109519" target="_blank">https://doi.org/10.1016/j.topol.2025.109519</a>
+                </div>
+                <div class="item">
+                    <p class="item-title">The point-fibred property of an iterated function system with local radial contractions and its consequences</p>
+                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Journal of Fixed Point Theory and Applications</span>, 27:20 (2025) </p>
+                </div>
+                <div class="item">
+                    <p class="item-title">The Hutchinson-Barnsley Theory for Iterated Function System with Bounded Cyclic Contractions</p>
+                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 174, 113796 (2023) </p>
+                </div>
+                <div class="item">
+                    <p class="item-title">On the code space and Hutchinson measure for countable iterated function system consisting of cyclic $\phi$-contractions</p>
+                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 167, 113011 (2023) </p>
+                </div>
 
-            <h3>Journal Articles</h3>
-            
-            <div class="item">
-                <p class="item-title">Exploring Iterative Dynamics, Invariant Measures, and Ergodicity in F-Contractive Iterated Function Systems</p>
-                <p class="item-meta">R. Medhi, N. Secelean, P. Viswanathan | <span class="journal">Qualitative Theory of Dynamical Systems</span>, 24, 185 (2025) </p>
-                <a class="doi" href="https://doi.org/10.1007/s12346-025-01345-4" target="_blank">https://doi.org/10.1007/s12346-025-01345-4</a>
-            </div>
+                <h3>Articles Communicated</h3>
+                <div class="item"><p class="item-title">1. Elton's Ergodic Theorem Revisited: Extension to Iterated Function Systems with Local Radial Contractions</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
+                <div class="item"><p class="item-title">2. Ergodicity-Inducing Iterated Function Systems: A Unified Approach to Elton's Ergodic Theorem for Various IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
+                <div class="item"><p class="item-title">3. Ruelle operator theorem for F-contractive IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
 
-            <div class="item">
-                <p class="item-title">A note on the Banach limit-based proof of Elton's ergodic theorem for iterated function systems</p>
-                <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Topology and Applications</span> (2025) </p>
-                <a class="doi" href="https://doi.org/10.1016/j.topol.2025.109519" target="_blank">https://doi.org/10.1016/j.topol.2025.109519</a>
-            </div>
+                <h3>Preprints</h3>
+                <div class="item">
+                    <p class="item-title">Dimension study of $\mu$-similar sets and measures</p>
+                    <p class="item-meta">Bárány, B., Medhi, R. </p>
+                </div>
+            </section>
 
-            <div class="item">
-                <p class="item-title">The point-fibred property of an iterated function system with local radial contractions and its consequences</p>
-                <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Journal of Fixed Point Theory and Applications</span>, 27:20 (2025) </p>
-            </div>
+            <section>
+                <h2>Conferences & Workshops</h2>
+                <ul class="conferences">
+                    <li>Presented <em>"Dimension estimates of $\mu$-similar sets and measures"</em> at <strong>On Geometric Complexity of Julia Sets VI</strong>, Będlewo, Poland. </li>
+                    <li>Presented <em>"Iterated Function Systems with Local Radial Contractions"</em> at <strong>Geometry of Deterministic and Random Fractals II</strong>, Budapest, Hungary. </li>
+                    <li>Presented <em>"Ergodic Theorem for Iterated Function System with Local Radial Contractions"</em> at <strong>Geometry and Fractals under the Midnight Sun</strong>, University of Oulu, Finland. </li>
+                    <li>Attended GIAN course on <strong>Fractal Geometric Measure Theory and Applications</strong>, IIT Madras, India. </li>
+                    <li>Presented <em>"A rudimentary exploration towards reproducing kernel Hilbert space of multivariate fractal functions"</em> at <strong>ICSAT-2023</strong>, CUSAT, Kerala, India. </li>
+                </ul>
+            </section>
 
-            <div class="item">
-                <p class="item-title">The Hutchinson-Barnsley Theory for Iterated Function System with Bounded Cyclic Contractions</p>
-                <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 174, 113796 (2023) </p>
-                <a class="doi" href="https://doi.org/10.1016/j.chaos.2023.113796" target="_blank">DOI Link</a>
-            </div>
-
-            <div class="item">
-                <p class="item-title">On the code space and Hutchinson measure for countable iterated function system consisting of cyclic $\phi$-contractions</p>
-                <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 167, 113011 (2023) </p>
-                <a class="doi" href="https://doi.org/10.1016/j.chaos.2023.113011" target="_blank">DOI Link</a>
-            </div>
-
-            <h3>Articles Communicated</h3>
-            
-            <div class="item">
-                <p class="item-title">1. Elton's Ergodic Theorem Revisited: Extension to Iterated Function Systems with Local Radial Contractions</p>
-                <p class="item-meta">Medhi, R., Viswanathan, P. </p>
-            </div>
-            <div class="item">
-                <p class="item-title">2. Ergodicity-Inducing Iterated Function Systems: A Unified Approach to Elton's Ergodic Theorem for Various IFSs</p>
-                <p class="item-meta">Medhi, R., Viswanathan, P. </p>
-            </div>
-            <div class="item">
-                <p class="item-title">3. Ruelle operator theorem for F-contractive IFSs</p>
-                <p class="item-meta">Medhi, R., Viswanathan, P. </p>
-            </div>
-
-            <h3>Preprints</h3>
-            <div class="item">
-                <p class="item-title">Dimension study of $\mu$-similar sets and measures</p>
-                <p class="item-meta">Bárány, B., Medhi, R. </p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Conferences & Workshops</h2>
-            <ul class="conferences">
-                <li>Presented <em>"Dimension estimates of $\mu$-similar sets and measures"</em> at the international conference <strong>On Geometric Complexity of Julia Sets VI</strong>, Będlewo, Poland. </li>
-                <li>Attended School on Dimension Theory of Fractals and Presented <em>"Iterated Function Systems with Local Radial Contractions"</em> at the <strong>Workshop on the Geometry of Deterministic and Random Fractals II</strong>, Budapest, Hungary. </li>
-                <li>Presented <em>"Ergodic Theorem for Iterated Function System with Local Radial Contractions"</em> at the International conference <strong>Geometry and Fractals under the Midnight Sun</strong> (2024), University of Oulu, Finland. </li>
-                <li>Attended GIAN course on <strong>Fractal Geometric Measure Theory and Applications</strong> (2023), IIT Madras, India. </li>
-                <li>Presented <em>"A rudimentary exploration towards reproducing kernel Hilbert space of multivariate fractal functions"</em> at the International Conference on <strong>Spectral and Approximation Theory (ICSAT-2023)</strong>, Cochin University of Science and Technology, Kerala, India. </li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Ridip Medhi. Mathematical formulas rendered dynamically using MathJax.</p>
-        </footer>
+            <footer>
+                <p>&copy; 2026 Ridip Medhi. Mathematical formulas rendered dynamically using MathJax.</p>
+            </footer>
+        </main>
     </div>
 </body>
 </html>
