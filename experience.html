@@ -8,13 +8,14 @@
     <style>
         :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
-        .container { max-width: 750px; margin: 0 auto; padding: 60px 20px; }
-        header { margin-bottom: 50px; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 10px 0; color: #1a252f; }
-        .subtitle { font-size: 1.1rem; color: var(--light-accent); margin: 0 0 20px 0; font-weight: 300; }
-        .nav-links { display: flex; gap: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; flex-wrap: wrap; }
-        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+        .wrapper { display: flex; max-width: 950px; margin: 0 auto; padding: 60px 20px; gap: 50px; }
+        .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 60px; height: fit-content; }
+        .sidebar h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0 0 5px 0; color: #1a252f; }
+        .sidebar .subtitle { font-size: 0.95rem; color: var(--light-accent); margin-bottom: 30px; font-weight: 300; line-height: 1.3; }
+        .nav-links { display: flex; flex-direction: column; gap: 12px; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 4px 0; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        .main-content { flex-grow: 1; max-width: 680px; }
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
         .item { margin-bottom: 25px; }
@@ -22,84 +23,88 @@
         .item-meta { font-size: 0.9rem; color: #2980b9; margin: 2px 0 6px 0; font-weight: 500; }
         ul.clean-list { list-style-type: square; padding-left: 20px; }
         ul.clean-list li { margin-bottom: 8px; font-size: 0.95rem; }
-        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; }
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; gap: 30px; padding: 40px 20px; }
+            .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+            .nav-links { flex-direction: row; flex-wrap: wrap; gap: 15px; }
+        }
+        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="wrapper">
+        <aside class="sidebar">
             <h1>Ridip Medhi</h1>
             <div class="subtitle">Postdoctoral Researcher in Mathematics</div>
-            <div class="nav-links">
+            <nav class="nav-links">
                 <a href="index.html">About</a>
                 <a href="research.html">Research</a>
                 <a href="experience.html" class="active">Experience</a>
                 <a href="interests.html">Interests</a>
                 <a href="reading.html">Reading</a>
-            </div>
-        </header>
+            </nav>
+        </aside>
 
-        <section>
-            <h2>Education</h2>
-            
-            <div class="item">
-                <div class="item-title">Ph.D. in Mathematics</div>
-                <div class="item-meta">Indian Institute of Technology Delhi | 2020 &ndash; 2025</div>
-            </div>
+        <main class="main-content">
+            <section>
+                <h2>Education</h2>
+                <div class="item">
+                    <div class="item-title">Ph.D. in Mathematics</div>
+                    <div class="item-meta">Indian Institute of Technology Delhi | 2020 &ndash; 2025 </div>
+                </div>
+                <div class="item">
+                    <div class="item-title">M.Sc. in Mathematics</div>
+                    <div class="item-meta">Tezpur University | 2018 &ndash; 2020 </div>
+                    <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 8.34 / 10 </p>
+                </div>
+                <div class="item">
+                    <div class="item-title">B.Sc. in Mathematics</div>
+                    <div class="item-meta">Guwahati College | 2015 &ndash; 2018 </div>
+                    <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 9.2 / 10 </p>
+                </div>
+            </section>
 
-            <div class="item">
-                <div class="item-title">M.Sc. in Mathematics</div>
-                <div class="item-meta">Tezpur University | 2018 &ndash; 2020</div>
-                <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 8.34 / 10</p>
-            </div>
+            <section>
+                <h2>Visiting Positions</h2>
+                <div class="item">
+                    <div class="item-title">Visiting Ph.D. Scholar</div>
+                    <div class="item-meta">Budapest University of Technology and Economics, Hungary | 2024 &ndash; 2025 </div>
+                    <p style="margin: 0; font-size: 0.95rem;">Conducting research in structural contraction metrics within the Department of Mathematics. </p>
+                </div>
+            </section>
 
-            <div class="item">
-                <div class="item-title">B.Sc. in Mathematics</div>
-                <div class="item-meta">Guwahati College | 2015 &ndash; 2018</div>
-                <p style="margin: 0; font-size: 0.95rem;">Cumulative GPA: 9.2 / 10</p>
-            </div>
-        </section>
+            <section>
+                <h2>Teaching Experience</h2>
+                <p>Served as a Graduate Teaching Assistant for core engineering and graduate tracks at IIT Delhi: </p>
+                <ul class="clean-list">
+                    <li><strong>MTL100: Calculus</strong> &ndash; Fall 2021, Fall 2022 (B.Tech.) </li>
+                    <li><strong>MTL101: Linear Algebra</strong> &ndash; Spring 2022 (B.Tech.) </li>
+                    <li><strong>MTL122: Real and Complex Analysis</strong> &ndash; Spring 2023 (B.Tech.) </li>
+                    <li><strong>MTL603: Functional Analysis</strong> &ndash; Fall 2023 (M.Sc.) </li>
+                    <li><strong>MTL510: Measure and Integration</strong> &ndash; Spring 2024 (M.Sc.) </li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Visiting Positions</h2>
-            <div class="item">
-                <div class="item-title">Visiting Ph.D. Scholar</div>
-                <div class="item-meta">Budapest University of Technology and Economics, Hungary | 2024 &ndash; 2025</div>
-                <p style="margin: 0; font-size: 0.95rem;">Spent an academic semester conducting advanced research within the Department of Mathematics.</p>
-            </div>
-        </section>
+            <section>
+                <h2>Grants, Honours & Awards</h2>
+                <ul class="clean-list">
+                    <li><strong>2025:</strong> Research Excellence Travel Award, IIT Delhi. </li>
+                    <li><strong>2024:</strong> Stipendium-Hungaricum Scholarship for doctoral research residency in Budapest. </li>
+                    <li><strong>2019:</strong> Qualified CSIR UGC-NET Junior Research Fellowship (JRF) with All India Rank (AIR) 98. </li>
+                    <li><strong>2019:</strong> NBHM Post-Graduate Merit Scholarship. </li>
+                    <li><strong>2018:</strong> UGC Post-Graduate Merit Scholarship for University Rank Holders. </li>
+                </ul>
+            </section>
 
-        <section>
-            <h2>Teaching Experience</h2>
-            <p>Served as a Graduate Teaching Assistant across multiple core engineering and graduate mathematics tracks within the Department of Mathematics at IIT Delhi:</p>
-            <ul class="clean-list">
-                <li><strong>MTL100: Calculus</strong> &ndash; Fall 2021, Fall 2022 (B.Tech.)</li>
-                <li><strong>MTL101: Linear Algebra</strong> &ndash; Spring 2022 (B.Tech.)</li>
-                <li><strong>MTL122: Real and Complex Analysis</strong> &ndash; Spring 2023 (B.Tech.)</li>
-                <li><strong>MTL603: Functional Analysis</strong> &ndash; Fall 2023 (M.Sc.)</li>
-                <li><strong>MTL510: Measure and Integration</strong> &ndash; Spring 2024 (M.Sc.)</li>
-            </ul>
-        </section>
+            <section>
+                <h2>Language Skills</h2>
+                <p style="font-size: 0.95rem;"><strong>Native:</strong> Assamese, Bengali &bull; <strong>Proficient:</strong> English, Hindi </p>
+            </section>
 
-        <section>
-            <h2>Grants, Honours & Awards</h2>
-            <ul class="clean-list">
-                <li><strong>2025:</strong> Research Excellence Travel Award, Indian Institute of Technology Delhi.</li>
-                <li><strong>2024:</strong> Stipendium-Hungaricum Scholarship for pursuing research residency at the Budapest University of Technology and Economics.</li>
-                <li><strong>2019:</strong> Qualified CSIR UGC-NET Junior Research Fellowship (JRF) with All India Rank (AIR) 98.</li>
-                <li><strong>2019:</strong> NBHM Post-Graduate Merit Scholarship.</li>
-                <li><strong>2018:</strong> UGC Post-Graduate Merit Scholarship for University Rank Holders.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Language Skills</h2>
-            <p style="font-size: 0.95rem;"><strong>Native:</strong> Assamese, Bengali &bull; <strong>Proficient:</strong> English, Hindi</p>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Ridip Medhi. Updated: January 2026.</p>
-        </footer>
+            <footer>
+                <p>&copy; 2026 Ridip Medhi. Updated: January 2026. </p>
+            </footer>
+        </main>
     </div>
 </body>
 </html>
