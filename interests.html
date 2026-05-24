@@ -8,18 +8,32 @@
     <style>
         :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
+        
+        /* Two-column layout wrapper */
         .wrapper { display: flex; max-width: 950px; margin: 0 auto; padding: 60px 20px; gap: 50px; }
+        
+        /* Persistent Left Sidebar */
         .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 60px; height: fit-content; }
         .sidebar h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0 0 5px 0; color: #1a252f; }
         .sidebar .subtitle { font-size: 0.95rem; color: var(--light-accent); margin-bottom: 30px; font-weight: 300; line-height: 1.3; }
         .nav-links { display: flex; flex-direction: column; gap: 12px; }
         .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 4px 0; transition: color 0.2s; }
         .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        
+        /* Right Content Area */
         .main-content { flex-grow: 1; max-width: 680px; }
         section { margin-bottom: 45px; }
         h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 20px; color: #1a252f; }
-        .interest-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+        
+        /* Interest Tags Layout */
+        .interest-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; margin-bottom: 30px; }
         .tag { background-color: #f0f2f5; padding: 8px 16px; border-radius: 4px; font-size: 0.9rem; color: var(--accent-color); font-weight: 500; }
+        
+        /* Interest Gallery Image Styling */
+        .interest-image-container { margin-top: 35px; }
+        .interest-img { width: 100%; max-width: 650px; height: auto; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid var(--border-color); display: block; }
+        .image-caption { font-size: 0.88rem; color: var(--light-accent); margin-top: 10px; font-style: italic; }
+
         @media (max-width: 768px) {
             .wrapper { flex-direction: column; gap: 30px; padding: 40px 20px; }
             .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
@@ -48,6 +62,7 @@
                 <p>
                     When I am not working on equations or refining mathematical proofs, I dedicate my time to a variety of analog, cultural, and outdoor pursuits that keep me grounded:
                 </p>
+                
                 <div class="interest-tags">
                     <span class="tag">🖋️ Fountain Pens & Specialized Bottled Inks</span>
                     <span class="tag">📖 Japanese Notebooks & Fine Stationery</span>
@@ -55,6 +70,11 @@
                     <span class="tag">🎬 Atmospheric, Winter-Set Cinema</span>
                     <span class="tag">🌿 Quiet Forest Trails & Rural Landscapes</span>
                     <span class="tag">🌱 Green Tea Plantations</span>
+                </div>
+
+                <div class="interest-image-container">
+                    <img src="percussion.jpg" alt="Traditional Percussion Performance" class="interest-img">
+                    <p class="image-caption">Practicing traditional Assamese devotional percussion and rhythmic patterns.</p>
                 </div>
             </section>
 
