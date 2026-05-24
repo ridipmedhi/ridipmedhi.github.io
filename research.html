@@ -38,19 +38,25 @@
         .doi { font-size: 0.85rem; color: #2980b9; text-decoration: none; } .doi:hover { text-decoration: underline; }
         ul.summary-list, ul.conferences { padding-left: 20px; }
         ul.summary-list li, ul.conferences li { margin-bottom: 10px; font-size: 0.95rem; }
-        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); border-top: 1px solid var(--border-color); padding-top: 20px; }
+        
+        /* Research Presentation Image Layout Styling */
+        .research-image-container { margin: 35px 0; padding: 10px; background: #fff; border: 1px solid var(--border-color); border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+        .research-img { width: 100%; max-width: 650px; height: auto; border-radius: 4px; display: block; margin: 0 auto; }
+        .image-caption { font-size: 0.88rem; color: var(--light-accent); margin-top: 12px; font-style: italic; text-align: center; line-height: 1.4; }
+
         @media (max-width: 768px) {
             .wrapper { flex-direction: column; gap: 30px; padding: 40px 20px; }
             .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
             .nav-links { flex-direction: row; flex-wrap: wrap; gap: 15px; }
         }
+        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); border-top: 1px solid var(--border-color); padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <aside class="sidebar">
             <h1>Ridip Medhi</h1>
-            <div class="subtitle">Researcher in Mathematics</div>
+            <div class="subtitle">Postdoctoral Researcher in Mathematics</div>
             <nav class="nav-links">
                 <a href="index.html">About</a>
                 <a href="research.html" class="active">Research</a>
@@ -64,12 +70,13 @@
             <section>
                 <h2>Research Overview</h2>
                 <p>
-                    The primary focus of my mathematical research has been to provide a unified approach to the study of Iterated Function Systems (IFSs) defined by weaker contractive mappings. By relaxing classical, rigid contraction constraints, my work investigates the core structural, geometric, and statistical behaviors of non-linear chaotic systems, focusing heavily on invariant measures and fractal dimensions. </p>
+                    The primary focus of my mathematical research has been to provide a unified approach to the study of Iterated Function Systems (IFSs) defined by weaker contractive mappings[cite: 78]. By relaxing classical, rigid contraction constraints, my work investigates the core structural, geometric, and statistical behaviors of non-linear chaotic systems, focusing heavily on invariant measures and fractal dimensions[cite: 79, 80].
+                </p>
                 <ul class="summary-list">
-                    <li><strong>Generalized Contractions:</strong> Established the Hutchinson-Barnsley theory, coding map continuities, and unique invariant measures for broad mapping families, including countable cyclic $\phi$-contractions, local radial contractions (LRCs), and $F$-contractions. </li>
-                    <li><strong>Elton's Ergodic Theorem & Banach Limits:</strong> Formulated the framework of <em>ergodicity-inducing IFSs</em> to derive sufficient conditions under which Elton's Ergodic Theorem holds, using properties of Banach limits to reconcile discrepancies in existing literature. </li>
-                    <li><strong>Dimension Formulae for $\phi$-Similar Systems:</strong> Resolved constraints in the dimension theory of generalized self-similarity by proving the Hausdorff dimension formula ($dim_H(\Lambda) = s$) under the Strong Separation Property (SSP) <em>without</em> assuming the exact Hausdorff measure is positive and finite. </li>
-                    <li><strong>Operator Dynamics:</strong> Evaluated the Ruelle operator theorem under systems with variable weight functions, confirming uniform convergence properties of normalized transfer operators. </li>
+                    <li><strong>Generalized Contractions:</strong> Established the Hutchinson-Barnsley theory, coding map continuities, and unique invariant measures for broad mapping families [cite: 82], including countable cyclic $\phi$-contractions [cite: 48, 58], local radial contractions (LRCs) [cite: 99, 100], and $F$-contractions[cite: 111, 116].</li>
+                    <li><strong>Elton's Ergodic Theorem & Banach Limits:</strong> Formulated the framework of <em>ergodicity-inducing IFSs</em> to derive sufficient conditions under which Elton's Ergodic Theorem holds [cite: 122, 127], using properties of Banach limits to reconcile discrepancies in existing literature[cite: 52, 120, 121].</li>
+                    <li><strong>Dimension Formulae for $\phi$-Similar Systems:</strong> Resolved constraints in the dimension theory of generalized self-similarity by proving the Hausdorff dimension formula ($dim_H(\Lambda) = s$) under the Strong Separation Property (SSP) [cite: 146] <em>without</em> assuming the exact Hausdorff measure is positive and finite[cite: 143, 144].</li>
+                    <li><strong>Operator Dynamics:</strong> Evaluated the Ruelle operator theorem under systems with variable weight functions [cite: 63, 133], confirming uniform convergence properties of normalized transfer operators[cite: 138].</li>
                 </ul>
             </section>
 
@@ -78,47 +85,52 @@
                 <h3>Journal Articles</h3>
                 <div class="item">
                     <p class="item-title">Exploring Iterative Dynamics, Invariant Measures, and Ergodicity in F-Contractive Iterated Function Systems</p>
-                    <p class="item-meta">R. Medhi, N. Secelean, P. Viswanathan | <span class="journal">Qualitative Theory of Dynamical Systems</span>, 24, 185 (2025) </p>
+                    <p class="item-meta">R. Medhi, N. Secelean, P. Viswanathan | <span class="journal">Qualitative Theory of Dynamical Systems</span>, 24, 185 (2025) [cite: 48, 49]</p>
                     <a class="doi" href="https://doi.org/10.1007/s12346-025-01345-4" target="_blank">https://doi.org/10.1007/s12346-025-01345-4</a>
                 </div>
                 <div class="item">
                     <p class="item-title">A note on the Banach limit-based proof of Elton's ergodic theorem for iterated function systems</p>
-                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Topology and Applications</span> (2025) </p>
+                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Topology and Applications</span> (2025) [cite: 52]</p>
                     <a class="doi" href="https://doi.org/10.1016/j.topol.2025.109519" target="_blank">https://doi.org/10.1016/j.topol.2025.109519</a>
                 </div>
                 <div class="item">
                     <p class="item-title">The point-fibred property of an iterated function system with local radial contractions and its consequences</p>
-                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Journal of Fixed Point Theory and Applications</span>, 27:20 (2025) </p>
+                    <p class="item-meta">R. Medhi, P. Viswanathan | <span class="journal">Journal of Fixed Point Theory and Applications</span>, 27:20 (2025) [cite: 53]</p>
                 </div>
                 <div class="item">
                     <p class="item-title">The Hutchinson-Barnsley Theory for Iterated Function System with Bounded Cyclic Contractions</p>
-                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 174, 113796 (2023) </p>
+                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 174, 113796 (2023) [cite: 55, 56]</p>
                 </div>
                 <div class="item">
                     <p class="item-title">On the code space and Hutchinson measure for countable iterated function system consisting of cyclic $\phi$-contractions</p>
-                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 167, 113011 (2023) </p>
+                    <p class="item-meta">Medhi, R., Viswanathan, P. | <span class="journal">Chaos, Solitons & Fractals</span>, 167, 113011 (2023) [cite: 58, 59]</p>
                 </div>
 
                 <h3>Articles Communicated</h3>
-                <div class="item"><p class="item-title">1. Elton's Ergodic Theorem Revisited: Extension to Iterated Function Systems with Local Radial Contractions</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
-                <div class="item"><p class="item-title">2. Ergodicity-Inducing Iterated Function Systems: A Unified Approach to Elton's Ergodic Theorem for Various IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
-                <div class="item"><p class="item-title">3. Ruelle operator theorem for F-contractive IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. </p></div>
+                <div class="item"><p class="item-title">1. Elton's Ergodic Theorem Revisited: Extension to Iterated Function Systems with Local Radial Contractions</p><p class="item-meta">Medhi, R., Viswanathan, P. [cite: 61]</p></div>
+                <div class="item"><p class="item-title">2. Ergodicity-Inducing Iterated Function Systems: A Unified Approach to Elton's Ergodic Theorem for Various IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. [cite: 62]</p></div>
+                <div class="item"><p class="item-title">3. Ruelle operator theorem for F-contractive IFSs</p><p class="item-meta">Medhi, R., Viswanathan, P. [cite: 63]</p></div>
 
                 <h3>Preprints</h3>
                 <div class="item">
                     <p class="item-title">Dimension study of $\mu$-similar sets and measures</p>
-                    <p class="item-meta">Bárány, B., Medhi, R. </p>
+                    <p class="item-meta">Bárány, B., Medhi, R. [cite: 65]</p>
+                </div>
+
+                <div class="research-image-container">
+                    <img src="presentation.jpg" alt="Presenting research on the Hausdorff dimension of phi-similar sets" class="research-img">
+                    <p class="image-caption">Presenting structural findings on the Hausdorff dimension ($dim_H(\Lambda) = s$) of $\phi$-similar sets[cite: 146, 147].</p>
                 </div>
             </section>
 
             <section>
                 <h2>Conferences & Workshops</h2>
                 <ul class="conferences">
-                    <li>Presented <em>"Dimension estimates of $\mu$-similar sets and measures"</em> at <strong>On Geometric Complexity of Julia Sets VI</strong>, Będlewo, Poland. </li>
-                    <li>Presented <em>"Iterated Function Systems with Local Radial Contractions"</em> at <strong>Geometry of Deterministic and Random Fractals II</strong>, Budapest, Hungary. </li>
-                    <li>Presented <em>"Ergodic Theorem for Iterated Function System with Local Radial Contractions"</em> at <strong>Geometry and Fractals under the Midnight Sun</strong>, University of Oulu, Finland. </li>
-                    <li>Attended GIAN course on <strong>Fractal Geometric Measure Theory and Applications</strong>, IIT Madras, India. </li>
-                    <li>Presented <em>"A rudimentary exploration towards reproducing kernel Hilbert space of multivariate fractal functions"</em> at <strong>ICSAT-2023</strong>, CUSAT, Kerala, India. </li>
+                    <li>Presented <em>"Dimension estimates of $\mu$-similar sets and measures"</em> at <strong>On Geometric Complexity of Julia Sets VI</strong>, Będlewo, Poland[cite: 68].</li>
+                    <li>Presented <em>"Iterated Function Systems with Local Radial Contractions"</em> at <strong>Geometry of Deterministic and Random Fractals II</strong>, Budapest, Hungary[cite: 69].</li>
+                    <li>Presented <em>"Ergodic Theorem for Iterated Function System with Local Radial Contractions"</em> at <strong>Geometry and Fractals under the Midnight Sun</strong>, University of Oulu, Finland[cite: 70].</li>
+                    <li>Attended GIAN course on <strong>Fractal Geometric Measure Theory and Applications</strong>, IIT Madras, India[cite: 71].</li>
+                    <li>Presented <em>"A rudimentary exploration towards reproducing kernel Hilbert space of multivariate fractal functions"</em> at <strong>ICSAT-2023</strong>, CUSAT, Kerala, India[cite: 72].</li>
                 </ul>
             </section>
 
