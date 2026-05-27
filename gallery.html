@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridip Medhi | Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-color: #fcfcfc; --text-color: #2c3e50; --accent-color: #34495e; --light-accent: #7f8c8d; --border-color: #eaeaea; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; margin: 0; padding: 0; }
+        
+        /* Two-column layout wrapper */
+        .wrapper { display: flex; max-width: 950px; margin: 0 auto; padding: 60px 20px; gap: 50px; }
+        
+        /* Persistent Left Sidebar */
+        .sidebar { width: 220px; flex-shrink: 0; position: sticky; top: 60px; height: fit-content; }
+        .sidebar h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0 0 5px 0; color: #1a252f; }
+        .sidebar .subtitle { font-size: 0.95rem; color: var(--light-accent); margin-bottom: 30px; font-weight: 300; line-height: 1.3; }
+        .nav-links { display: flex; flex-direction: column; gap: 12px; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 4px 0; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: #2980b9; font-weight: 600; }
+        
+        /* Right Content Area */
+        .main-content { flex-grow: 1; max-width: 680px; }
+        section { margin-bottom: 55px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 5px; margin-bottom: 25px; color: #1a252f; }
+        
+        /* Event Card Grid Styling */
+        .event-card { background: #fff; border: 1px solid var(--border-color); border-radius: 6px; padding: 15px; margin-bottom: 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .event-title { font-weight: 600; font-size: 1.1rem; margin: 0 0 4px 0; color: #1a252f; }
+        .event-meta { font-size: 0.9rem; color: #2980b9; margin: 0 0 15px 0; font-weight: 500; }
+        
+        .gallery-img { width: 100%; height: auto; border-radius: 4px; display: block; margin-bottom: 10px; border: 1px solid #f0f0f0; }
+        .img-caption { font-size: 0.88rem; color: var(--light-accent); margin: 0; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .wrapper { flex-direction: column; gap: 30px; padding: 40px 20px; }
+            .sidebar { width: 100%; position: relative; top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+            .nav-links { flex-direction: row; flex-wrap: wrap; gap: 15px; }
+        }
+        footer { margin-top: 80px; font-size: 0.85rem; color: var(--light-accent); border-top: 1px solid var(--border-color); padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <h1>Ridip Medhi</h1>
+            <div class="subtitle">Researcher in Mathematics</div>
+            <nav class="nav-links">
+                <a href="index.html">About</a>
+                <a href="research.html">Research</a>
+                <a href="experience.html">Experience</a>
+                <a href="interests.html">Interests</a>
+                <a href="reading.html">Reading</a>
+                <a href="gallery.html" class="active">Gallery</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section>
+                <h2>Academic Travels & Events</h2>
+                <p>Visual highlights and photos from various international and domestic conferences, workshops, and research visits.</p>
+
+                <div class="event-card">
+                    <p class="event-title">Geometric Complexity of Julia Sets VI</p>
+                    <p class="event-meta">Będlewo, Poland</p>
+                    <img src="poland_conference.jpg" alt="Conference in Poland" class="gallery-img">
+                    <p class="img-caption">Presenting structural findings on dimension estimates during the session tracks in Poland.</p>
+                </div>
+
+                <div class="event-card">
+                    <p class="event-title">Geometry of Deterministic and Random Fractals II</p>
+                    <p class="event-meta">Budapest, Hungary</p>
+                    <img src="budapest_workshop.jpg" alt="Workshop in Hungary" class="gallery-img">
+                    <p class="img-caption">Attending the School on Dimension Theory of Fractals and research discussions at BME.</p>
+                </div>
+
+                <div class="event-card">
+                    <p class="event-title">Geometry and Fractals under the Midnight Sun</p>
+                    <p class="event-meta">University of Oulu, Finland</p>
+                    <img src="finland_conference.jpg" alt="Conference in Finland" class="gallery-img">
+                    <p class="img-caption">Presenting recent results on Ergodic Theorems for Iterated Function Systems with local radial contractions.</p>
+                </div>
+
+                <div class="event-card">
+                    <p class="event-title">Spectral and Approximation Theory (ICSAT-2023)</p>
+                    <p class="event-meta">Cochin University of Science and Technology, Kerala, India</p>
+                    <img src="kochi_conference.jpg" alt="Conference in Kerala" class="gallery-img">
+                    <p class="img-caption">Presenting a framework towards reproducing kernel Hilbert spaces of multivariate fractal functions.</p>
+                </div>
+
+                <div class="event-card">
+                    <p class="event-title">GIAN Course on Fractal Geometric Measure Theory</p>
+                    <p class="event-meta">IIT Madras, Tamil Nadu, India</p>
+                    <img src="madras_gian.jpg" alt="GIAN Course at IIT Madras" class="gallery-img">
+                    <p class="img-caption">Participating in the specialized winter school sessions on geometric measure applications.</p>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 Ridip Medhi. Academic Travel Log.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
